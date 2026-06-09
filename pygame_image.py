@@ -10,7 +10,7 @@ def main():
     screen = pg.display.set_mode((800, 600))
     clock  = pg.time.Clock()
     bg_img = pg.image.load("fig/pg_bg.jpg")
-    kk_img=pg.image.load("fig/pg_bg.jpg") #surface
+    kk_img=pg.image.load("fig/3.png") #surface
     kk_img=pg.transform.flip(kk_img,True,False)#left right 
     tmr = 0
     while True:
@@ -18,6 +18,7 @@ def main():
             if event.type == pg.QUIT: return
 
         screen.blit(bg_img, [0, 0])
+        screen.blit(kk_img,[300,200])
         pg.display.update()
         tmr += 1        
         clock.tick(10)
